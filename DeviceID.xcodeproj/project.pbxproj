@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		844EF360277C7044000E7471 /* DeviceID.docc in Sources */ = {isa = PBXBuildFile; fileRef = 844EF35F277C7044000E7471 /* DeviceID.docc */; };
 		844EF366277C7044000E7471 /* DeviceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844EF35B277C7044000E7471 /* DeviceID.framework */; };
 		844EF36B277C7044000E7471 /* DeviceIDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844EF36A277C7044000E7471 /* DeviceIDTests.swift */; };
 		844EF36C277C7044000E7471 /* DeviceID.h in Headers */ = {isa = PBXBuildFile; fileRef = 844EF35E277C7044000E7471 /* DeviceID.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -57,7 +56,6 @@
 /* Begin PBXFileReference section */
 		844EF35B277C7044000E7471 /* DeviceID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeviceID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		844EF35E277C7044000E7471 /* DeviceID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceID.h; sourceTree = "<group>"; };
-		844EF35F277C7044000E7471 /* DeviceID.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = DeviceID.docc; sourceTree = "<group>"; };
 		844EF365277C7044000E7471 /* DeviceIDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceIDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		844EF36A277C7044000E7471 /* DeviceIDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIDTests.swift; sourceTree = "<group>"; };
 		844EF379277C711A000E7471 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +66,8 @@
 		844EF38D277C729A000E7471 /* ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ID.swift; sourceTree = "<group>"; };
 		844EF395277CC41E000E7471 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		844EF397277CC876000E7471 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		844EF399277CD7F3000E7471 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		844EF39A277CE3E7000E7471 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +101,8 @@
 		844EF351277C7044000E7471 = {
 			isa = PBXGroup;
 			children = (
+				844EF399277CD7F3000E7471 /* README.md */,
+				844EF39A277CE3E7000E7471 /* Package.swift */,
 				844EF35D277C7044000E7471 /* Sources */,
 				844EF369277C7044000E7471 /* Tests */,
 				844EF37A277C711A000E7471 /* Sample */,
@@ -122,10 +124,7 @@
 		844EF35D277C7044000E7471 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				844EF35E277C7044000E7471 /* DeviceID.h */,
-				844EF38D277C729A000E7471 /* ID.swift */,
-				844EF395277CC41E000E7471 /* Keychain.swift */,
-				844EF35F277C7044000E7471 /* DeviceID.docc */,
+				844EF39D277CE661000E7471 /* DeviceID */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -133,7 +132,7 @@
 		844EF369277C7044000E7471 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				844EF36A277C7044000E7471 /* DeviceIDTests.swift */,
+				844EF39E277CE66F000E7471 /* DeviceIDTests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -163,6 +162,24 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		844EF39D277CE661000E7471 /* DeviceID */ = {
+			isa = PBXGroup;
+			children = (
+				844EF35E277C7044000E7471 /* DeviceID.h */,
+				844EF38D277C729A000E7471 /* ID.swift */,
+				844EF395277CC41E000E7471 /* Keychain.swift */,
+			);
+			path = DeviceID;
+			sourceTree = "<group>";
+		};
+		844EF39E277CE66F000E7471 /* DeviceIDTests */ = {
+			isa = PBXGroup;
+			children = (
+				844EF36A277C7044000E7471 /* DeviceIDTests.swift */,
+			);
+			path = DeviceIDTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,7 +330,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				844EF38E277C729A000E7471 /* ID.swift in Sources */,
-				844EF360277C7044000E7471 /* DeviceID.docc in Sources */,
 				844EF396277CC41E000E7471 /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,7 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -462,7 +478,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -486,7 +502,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -515,7 +531,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -580,7 +596,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -610,7 +626,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
